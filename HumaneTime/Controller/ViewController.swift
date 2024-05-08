@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let url = "https://eland-dk.humaneland.net/HumaneTime/api/Authorization/AccesoUsuario"
     
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         enterButton.layer.cornerRadius = 10
+        activityIndicator.isHidden = true
         
     }
     
@@ -48,6 +50,9 @@ class ViewController: UIViewController {
             return
         }
         
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
         // Parámetros de la solicitud
         let parameters: [String: String] = [
             "email": email,
@@ -56,6 +61,9 @@ class ViewController: UIViewController {
         
         //Solicitud POST a la API utilizando Alamofire, consumimos la api
         AF.request(url, method: .post, parameters: parameters).responseJSON { response in
+            
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
             switch response.result {
                 case .success(let value):
                     // Manejar la respuesta exitosa

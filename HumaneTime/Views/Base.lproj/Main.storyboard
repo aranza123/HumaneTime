@@ -63,13 +63,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O6T-kp-xmo">
                                                 <rect key="frame" x="0.0" y="58" width="414" height="48"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvP-pl-c4z">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvP-pl-c4z">
                                                         <rect key="frame" x="20" y="0.0" width="374" height="14"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-HY-L89">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-HY-L89">
                                                         <rect key="frame" x="20" y="14" width="374" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -149,6 +149,9 @@
                                     <constraint firstAttribute="height" constant="60" id="1cG-qX-5GL"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mve-09-3TP">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -161,10 +164,13 @@
                             <constraint firstItem="Xi8-EO-t7O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V0X-6T-bRV"/>
                             <constraint firstItem="JZz-Mk-gdA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="WbA-Ap-1oc"/>
                             <constraint firstItem="FZC-J4-DYj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dyp-W8-HLA"/>
+                            <constraint firstItem="mve-09-3TP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gQB-uE-XCW"/>
+                            <constraint firstItem="mve-09-3TP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ge2-Pd-o3v"/>
                             <constraint firstAttribute="trailing" secondItem="JZz-Mk-gdA" secondAttribute="trailing" id="s1c-IW-mLv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="mve-09-3TP" id="aIx-eb-k0U"/>
                         <outlet property="emailTextField" destination="eny-nB-fha" id="f5P-vw-fjv"/>
                         <outlet property="enterButton" destination="auW-be-KpB" id="Dim-ng-7Ae"/>
                         <outlet property="passwordTextField" destination="lFg-HY-L89" id="fNL-Fz-6V8"/>
