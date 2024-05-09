@@ -13,6 +13,7 @@ class Custom: UIView {
     @IBOutlet weak var buttonAccept: UIButton!
     @IBOutlet weak var labelMessage: UILabel!
     
+    @IBOutlet weak var view: UIView!
     var message: String!
     
     //metodo de inicializacion cuando se crea através de un archivo xib
@@ -38,6 +39,7 @@ class Custom: UIView {
         view.frame = bounds
         addSubview(view)
         labelMessage.text = message
+        view.layer.cornerRadius = 10
     }
     
     //Carga de la vista desde el archivo xib 

@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="buttonAccept" destination="QQe-Dk-GoT" id="9gQ-0G-PEB"/>
                 <outlet property="labelMessage" destination="2JR-0v-VaS" id="zoA-dd-KMj"/>
+                <outlet property="view" destination="Cst-Zg-SGH" id="cXO-te-h0z"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -45,7 +46,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemGray4Color"/>
                     <constraints>
                         <constraint firstItem="2JR-0v-VaS" firstAttribute="top" secondItem="npq-BN-LNu" secondAttribute="bottom" constant="15" id="34K-LA-n4F"/>
                         <constraint firstAttribute="bottom" secondItem="QQe-Dk-GoT" secondAttribute="bottom" constant="15" id="RA2-Lk-FKo"/>
@@ -73,8 +74,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
